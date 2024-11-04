@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+    <body>
+        <audio id="myAudio">
+            <source src="media/sounds/vine-boom.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h1 class="text-3xl font-bold underline">
+            Hello world!
+        </h1>
+        <div class="grid grid-cols-3 gap-4">
+            <div>
+                <button onclick="playAudio('vine-boom')" type="button">Play Audio</button>
+            </div>
+            <div>
+                <button onclick="playAudio('discord-notification')" type="button">Play Audio</button>
+            </div>
+            <div>
+                <button onclick="playAudio('jixaw-metal-pipe-falling-sound')" type="button">Play Audio</button>
+            </div>
+            <div>
+                <button onclick="playAudio('spongebob-fail')" type="button">Play Audio</button>
+            </div>
+        </div>
+
+
+
+        
+        <script>            
+            function playAudio(sound) {
+                var audio = new Audio('media/sounds/' + sound + '.mp3')
+                audio.play(); 
+            }
+        </script>            
+    </body>
+</html>
